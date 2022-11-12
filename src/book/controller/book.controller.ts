@@ -1,7 +1,7 @@
+import { IdDto } from './../../share/dto/uuid.dto';
 import { BookDto } from './../dto/book.dto';
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post } from '@nestjs/common';
 import { BookService } from '../service/book.service';
-import { IdDto } from 'src/share/dto/uuid.dto';
 
 @Controller('book')
 export class BookController {
@@ -13,7 +13,7 @@ export class BookController {
   }
 
   @Get()
-  get() {
+  getAll() {
     return this.bookService.findAll();
   }
 
